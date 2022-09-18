@@ -1,0 +1,147 @@
+.ContainerSeven{
+
+    padding: 4rem;
+    h2{
+        font-size: 3rem;
+        padding: 2rem 4rem 0rem 4rem;
+        font-weight: 400;
+    }
+    span{
+        padding: 2rem 4rem;
+    }
+
+}
+
+.ContainerSeven img{
+    width: 25px;
+    height: 25px;
+}
+
+.SevenLeft{
+    display: flex;
+    align-items:flex-start;
+    flex-direction: column;
+    color: #fff;
+    background: rgba(50, 50, 50, 0.4);
+    border-radius: 40px;
+    z-index: 1;
+    max-width: 60vw;
+
+    // a{
+    //     left: 4rem;
+    // }
+}
+
+a{
+    position: relative;
+}
+
+.row-adjust{
+    display: flex;
+    width: 100%;
+    flex-direction: row-reverse;
+}
+.SevenRight{
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    text-align: right;
+    flex-direction: column;
+    color: #fff;
+    background: rgb(134, 55, 208,0.4);
+    border-radius: 40px;
+    z-index: 1;
+    max-width: 60vw;
+
+    span{
+        margin-bottom: 3rem;
+    }
+}
+
+.join-btn{
+    position: relative;
+    right: 4rem;
+    padding-bottom: 2rem;
+}
+.join-btn a{
+    position:relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    background-color: #fff;
+    color: rgb(50,50,50);
+    border: none;
+    padding: 1rem 1.5rem;
+    border-radius: 10px;
+    display: inline-block;
+    font-size: 1.5rem;
+    transition: all 0.3s ease 0s;
+}
+.join-btn a:hover{
+    background-color: rgb(134, 55, 208,1);
+    color: #fff;
+}
+
+.quote-btn{
+    position: relative;
+    left: 4rem;
+    padding-bottom: 2rem;
+}
+.quote-btn a{
+    position:relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    background-color: #fff;
+    color: rgb(50,50,50);
+    border: none;
+    padding: 1rem 1.5rem;
+    border-radius: 10px;
+    display: inline-block;
+    font-size: 1.5rem;
+    transition: all 0.3s ease 0s;
+}
+
+.quote-btn a:hover{
+    background-color: rgb(134, 55, 208,1);
+    color: #fff;
+}
+.quote-btn-content{
+  display: flex;
+  justify-items: center;
+  align-items: center;
+}
+.quote-icon{
+  padding-left: 1rem;
+}
+// .quote-btn{
+//     position:relative;
+//     margin-bottom: 3rem;
+//     display: flex;
+//     align-items: center;
+//     justify-content: flex-end;
+//     background: #fff;
+//     color: rgb(50,50,50);
+//     border: none;
+//     padding: 1rem 1.5rem;
+//     border-radius: 10px;
+// }
+
+// .quote-btn-text{
+//     font-size: 1.25rem;
+//     padding-right: 20px;
+// }
+
+@media (max-width: 481px) {
+    .ContainerSeven{
+        padding: 1.5rem;
+    }
+
+    .SevenLeft{
+        max-width: 80vw;
+    }
+
+    .SevenRight{
+        max-width: 80vw;
+    }
+}

@@ -1,0 +1,111 @@
+.ContainerFive{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 3rem;
+    // height: 80vh;
+}
+
+.FiveLeft{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    img{
+        height: 500px;
+        width: 500px;
+    }
+}
+
+.FiveRight{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    h1{
+        font-size: 2.5em;
+    }
+    p{
+        padding-top: 2rem;
+        font-size: 1.2rem;
+    }
+}
+
+.FiveList{
+    ul {
+        counter-reset: index;  
+        padding: 0;
+        max-width: 400px;
+      }
+      
+      /* List element */
+      li {
+        counter-increment: index; 
+        display: flex;
+        align-items: center;
+        padding: 12px 0;
+        box-sizing: border-box;
+      }
+      
+      
+      /* Element counter */
+      li::before {
+        content: counters(index, ".", decimal-leading-zero);
+        font-size: 1.5rem;
+        text-align: right;
+        font-weight: bold;
+        min-width: 50px;
+        padding-right: 12px;
+        font-variant-numeric: tabular-nums;
+        align-self: flex-start;
+        background-image: linear-gradient(to bottom, aquamarine, orangered);
+        background-attachment: fixed;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+      
+      
+      /* Element separation */
+      li + li {
+        border-top: 1px solid rgba(255,255,255,0.2);
+      }
+}
+
+
+.collab-btn{
+    padding-top: 2rem;
+}
+
+.collab-btn a{
+    position:relative;
+    // margin-bottom: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    background-color: #fff;
+    color: rgb(50,50,50);
+    border: none;
+    padding: 1rem 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+    display: inline-block;
+    font-size: 1.5rem;
+    transition: all 0.3s ease 0s;
+}
+
+.collab-btn a:hover{
+    background-color: rgb(134, 55, 208,1);
+    color: #fff;
+  }
+
+
+
+a{
+    position: relative;
+}
+
+
+@media (max-width: 481px) {
+    .ContainerFive{
+        grid-template-columns: 1fr;
+    }
+}

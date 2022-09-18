@@ -1,0 +1,166 @@
+* {
+    box-sizing: border-box;
+    scroll-snap-type: y mandatory;
+    overflow-x: hidden;
+}
+section {
+    height: 100vh;
+}
+
+.container {
+    height: 100vh;
+}
+
+
+
+.shape-top{
+    position: fixed;
+    width: 120vh;
+    height: 90vh;
+    top: 20%;
+    left: 0;
+    /* transform: translate(20%, -60%); */
+    background: radial-gradient(rgb(134, 55, 208,0.7), rgb(6,147,227,0.01  ) 70%);
+    border-radius: 50%;
+    z-index: -2;
+    transform: scale();
+    animation: blob-anim-top 100s ease infinite;
+}
+@keyframes blob-anim-top{
+	0%{ transform: translate(-90%, -90%) scale(1);}
+	10%{}
+	20%{}
+	30%{transform: translate(20%, -70%) scale(1.2);}
+	40%{}
+	50%{}
+	60%{transform: translate(20%, -70%) scale(1.4);}
+	70%{}
+	80%{}
+	90%{transform: translate(-70%, -80%) scale(1.1);}
+	100%{ transform: translate(-90%, -90%) scale(1);}
+}
+
+.shape-bottom{
+    position: fixed;
+    width: 120vh;
+    height: 90vh;
+    bottom: 0;
+    right: 0;
+    /* transform: translate(20%, 40%) scale(1.2); */
+    background: radial-gradient(rgb(255, 242, 0, 0.7),transparent 70%);
+    border-radius: 50%;
+    z-index: -2;
+    /* animation: blob-anim-bottom 130s ease infinite; */
+    animation-name: blob-anim-bottom;
+    animation-duration: 130s;
+    /* animation-delay: 10s; */
+    animation-iteration-count:infinite;
+    animation-timing-function:ease;
+}
+@keyframes blob-anim-bottom{
+	0%{ transform: translate(40%, 90%) scale(1);}
+	10%{ transform: translate(40%, 60%) scale(1);}
+	20%{}
+	30%{}
+	40%{ transform: translate(20%, 40%) scale(1.2);}
+	50%{}
+	60%{}
+	70%{transform: translate(20%, 40%) scale(1.2);}
+	80%{}
+	90%{transform: translate(40%, 60%) scale(1);}
+	100%{transform: translate(40%, 90%) scale(1);}
+}
+
+.noise {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    pointer-events: none;
+    z-index: 0;
+    opacity: .6;
+}
+.noise:after {
+    content: "";
+    width: calc(100% + 20rem);
+    height: calc(100% + 20rem);
+    background-image: url(https://dpt.co/_nuxt/img/noise.5058f6b.png);
+    background-position: 50%;
+    position: absolute;
+    left: -10rem;
+    top: -10rem;
+    will-change: transform;
+    -webkit-animation: noise-anim 1s steps(2) infinite;
+    animation: noise-anim 1s steps(2) infinite;
+}
+@-webkit-keyframes noise-anim{
+    0%{
+        transform:translate3d(0,9rem,0)
+    }
+    10%{
+        transform:translate3d(-1rem,-4rem,0)
+    }
+    20%{
+        transform:translate3d(-8rem,2rem,0)
+    }
+    30%{
+        transform:translate3d(9rem,-9rem,0)
+    }
+    40%{
+        transform:translate3d(-2rem,7rem,0)
+    }
+    50%{
+        transform:translate3d(-9rem,-4rem,0)
+    }
+    60%{
+        transform:translate3d(2rem,6rem,0)
+    }
+    70%{
+        transform:translate3d(7rem,-8rem,0)
+    }
+    80%{
+        transform:translate3d(-9rem,1rem,0)
+    }
+    90%{
+        transform:translate3d(6rem,-5rem,0)
+    }
+    to{
+        transform:translate3d(-7rem,0,0)
+    }
+}
+@keyframes noise-anim{
+    0%{
+        transform:translate3d(0,9rem,0)
+    }
+    10%{
+        transform:translate3d(-1rem,-4rem,0)
+    }
+    20%{
+        transform:translate3d(-8rem,2rem,0)
+    }
+    30%{
+        transform:translate3d(9rem,-9rem,0)
+    }
+    40%{
+        transform:translate3d(-2rem,7rem,0)
+    }
+    50%{
+        transform:translate3d(-9rem,-4rem,0)
+    }
+    60%{
+        transform:translate3d(2rem,6rem,0)
+    }
+    70%{
+        transform:translate3d(7rem,-8rem,0)
+    }
+    80%{
+        transform:translate3d(-9rem,1rem,0)
+    }
+    90%{
+        transform:translate3d(6rem,-5rem,0)
+    }
+    to{
+        transform:translate3d(-7rem,0,0)
+    }
+}

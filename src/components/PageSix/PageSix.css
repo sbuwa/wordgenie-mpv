@@ -1,0 +1,68 @@
+.ContainerSix{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    height: 60vh;
+}
+.copyright{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    /* margin-top: 12rem; */
+    padding: 2rem;
+}
+
+.ContainerSix img{
+    height: 70px;
+    width: 70px;
+}
+
+.circleEmboss{
+    position: relative;
+    width: 8rem;
+    height: 8rem;
+    box-shadow: inset 5px 5px 5px rgba(0, 0, 0, 0.2),
+        inset -5px -5px 15px rgba(255, 255, 255, 0.1),
+        5px 5px 15px rgba(0, 0, 0, 0.3), -5px -5px 15px rgba(255, 255, 255, 0.1);
+    border-radius: 200px;
+    margin: 30px;
+    background-color: none;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    transition: all .2s ease 0s;
+    cursor: pointer;
+}
+
+.circleEmboss:hover:nth-child(1){
+    background: #3b5998;
+}
+
+.circleEmboss:hover:nth-child(2){
+    background:linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d);
+    opacity: 1;
+}
+
+.circleEmboss:hover:nth-child(3){
+    background: #1DA1F2;
+}
+
+.circleEmboss:hover:nth-child(4){
+    background: #EA4335;
+}
+
+@media (max-width: 481px) {
+    .ContainerSix img{
+        height: 50px;
+        width: 50px;
+    }
+
+    .circleEmboss{
+        width: 6rem;
+        height: 6rem;
+    }
+
+    .copyright{
+        margin-top: 8rem;
+    }
+}

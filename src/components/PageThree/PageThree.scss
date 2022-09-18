@@ -1,0 +1,36 @@
+.ContainerThree{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-top: 0;
+    /* height: 100vh; */
+}
+
+.ThreeLeft{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow:visible !important;
+}
+
+.ThreeRight{
+    display: flex;
+    align-items: left;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 5rem;
+    
+    span{
+        padding-top: 1rem;
+    }
+}
+
+@media (max-width: 481px) {
+    .ContainerThree{
+        grid-template-columns: 1fr;
+        padding-top: 4rem;
+    }
+
+    .ThreeRight{
+        padding: 0 3rem;
+    }
+}
